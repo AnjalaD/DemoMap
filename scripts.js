@@ -27,6 +27,11 @@ function moveMapToBerlin(map){
   map.setZoom(14);
 }
 
+function setMapViewBounds(map){
+  var bbox = new H.geo.Rect(42.3736,-71.0751,42.3472,-71.0408);
+  map.setViewBounds(bbox);
+}
+
 
 
 
@@ -48,7 +53,7 @@ var defaultLayers = platform.createDefaultLayers({
 });
 
 //Step 2: initialize a map  - not specificing a location will give a whole world view.
-var map = new H.Map(document.getElementById('map'),
+var map = new H.Map(document.getElementById('mapContainer'),
   defaultLayers.normal.map, {pixelRatio: pixelRatio});
 
 //Step 3: make the map interactive
@@ -60,4 +65,5 @@ var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 var ui = H.ui.UI.createDefault(map, defaultLayers);
 
 // Now use the map as required...
-moveMapToBerlin(map);
+// moveMapToBerlin(map);
+setMapViewBounds(map);
