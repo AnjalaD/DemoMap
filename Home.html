@@ -21,6 +21,7 @@
     <div id="result" style="color:white;"></div>
     <div style="width: auto; height: 400px" id="mapContainer"></div>
     <div style="width: auto; height: 400px" id="mapContainer2"></div>
+    <div style="width: auto; height: 400px" id="mapContainer3"></div>
 
     <div id="panel" style="color:white;" ></div>
     <!-- <script src="scripts.js" type="text/javascript"></script> -->
@@ -29,6 +30,7 @@
         mymap = HMap.getInstance();
         mymap.showPointAndCenter({latitude:6.7949240,longitude:79.900755},'mapContainer','university');
         mymap.showPointAndCenter({latitude:7.029852,longitude:79.921640},'mapContainer2','ragama');
+        mymap.showRouteFromAtoB({latitude:6.7949240,longitude:79.900755},{latitude:7.029852,longitude:79.921640},'mapContainer3');
 
     </script>
 
